@@ -1,0 +1,41 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/bg_red.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  padding: 10rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.menu {
+  width: 40%;
+}
+
+.menu .heading {
+  font-size: 5rem;
+}
+
+.menu h1 {
+  color: #fca5a9;
+  margin-top: 1rem;
+}
+
+.menu .item {
+  display: flex;
+  justify-content: space-between;
+  color: #fee2e3;
+}
+
+.menu .item select {
+  border: none;
+  margin-left: 2rem;
+  width: 2.5rem;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}

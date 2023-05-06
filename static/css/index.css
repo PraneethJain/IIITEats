@@ -2,8 +2,9 @@
   width: 100vw;
   height: 100vh;
   color: #dbf1fe;
-  background: url(../images/bg.svg);
+  background: url(../images/bg_blue.svg);
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +52,7 @@
 }
 
 .canteens .canteen img {
-  border: 0.3rem solid #92dafe;
+  border: 0.3rem solid #1c71d8;
   width: 15vw;
   aspect-ratio: 1/1;
   border-radius: 50%;
