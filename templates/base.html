@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %} {% endblock %} - IIITEats</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  </head>
+  <body>
+      <header>
+        <h1> <img src="{{url_for('static', filename='images/logo_inverted.png')}}" alt="logo">IIITEats</h1>
+          <nav>
+              <ul>
+                  <li>
+                      <a href="/">Home</a>
+                  </li>
+                  <li class="dropDown-menu">
+                      <a href="#">Canteens</a>
+                      <ul>
+                        <li><a href="/tantra">Tantra</a></li>
+                        <li><a href="/vc">Vindhya Canteen</a></li>
+                        <li><a href="/bbc">Basketball Court Canteen</a></li>
+                      </ul>
+                  </li>
+                  <li class="dropDown-menu">
+                    <a href="#">Orders</a>
+                    <ul>
+                    <li><a href="/pending">Pending</a></li>
+                    <li><a href="/accepted">Accepted</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                      <a href="about.html" target="_blank">About Us</a>
+                  </li>
+              </ul>
+          </nav>
+      </header>
+    {% block content %} {% endblock %}
+    <h1>THIS IS A FOOTER</h1>
+  </body>
+</html>
