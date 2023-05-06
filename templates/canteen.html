@@ -16,7 +16,7 @@ content %}
     {% for item_name, item_price in category_items.items() %}
     <div class="item">
       <div class="left">{{item_name}}</div>
-      <div class="right">
+      <div class="right" data-price="{{item_price}}">
         {{item_price}}
         <select name="quantity" id="quantity">
           <option value="0">0</option>
@@ -55,6 +55,19 @@ content %}
       <label for="phone-number">Phone Number:</label>
       <input type="tel" id="phone-number" name="phone-number" /><br /><br />
     </div>
+    
+    <table>
+      <tr>
+        <th>Travel Cost</th>
+        <th>Food Cost</th>
+        <th>Total Cost</th>
+      </tr> 
+      <tr>
+        <td class="travel-cost">0</td>
+        <td class="food-cost">0</td>
+        <td class="total-cost">0</td>
+      </tr>
+    </table>
 
     <input type="submit" value="Submit" />
   </form>

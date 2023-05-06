@@ -60,6 +60,11 @@ form > div {
   margin: 0.4rem;
 }
 
+form .cost {
+  width: 100%;
+  text-align: center;
+}
+
 form input,
 select {
   font-size: 1.3rem;
@@ -78,4 +83,16 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+table {
+  margin: 2rem 0;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.7rem;
+  border: 1px solid white;
 }
