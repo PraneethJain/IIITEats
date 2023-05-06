@@ -2,7 +2,27 @@
 %}
 
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
+<script defer src="{{ url_for('static', filename='js/index.js') }}"></script>
 
-<div class="background"></div>
+
+<div class="background">
+  <div class="canteens">
+    <div class="canteen">
+      <img src="https://picsum.photos/600"> 
+      <div class="name">Tantra</div>
+    </div>
+
+    <div class="canteen">
+      <img src="https://picsum.photos/600"> 
+      <div class="name">BBC</div>
+    </div>
+
+    <div class="canteen">
+      <img src="https://picsum.photos/600"> 
+      <div class="name">VC</div>
+    </div>
+  </div> 
+  <h1>IIITEats</h1> 
+</div>
 
 {% endblock %}

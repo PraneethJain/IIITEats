@@ -3,6 +3,11 @@
   src: url(../fonts/Poppins/Poppins-Regular.ttf);
 }
 
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +25,7 @@ header {
   position: fixed;
   width: 100vw;
   height: 7vh;
-  z-index: 1;
+  z-index: 10;
   padding: 0 1.5rem;
   color: #eff9ff;
 }
@@ -68,7 +73,7 @@ nav .dropDown-menu > ul {
   margin: 1.6rem 0 0;
   padding: 1rem 0;
   position: absolute;
-  background-color: rgba(32, 32, 32, 0.3);
+  background-color: rgba(32, 32, 32, 0.8);
   width: 10rem;
   box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.3);
   display: none;
