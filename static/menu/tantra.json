@@ -1,0 +1,19 @@
+[
+  {
+    "Manchuria": {
+      "Veg Manchuria": 70,
+      "Paneer Manchuria": 120,
+      "Gobi Manchuria": 70,
+      "Chicken Manchuria": 130
+    }
+  },
+  {
+    "Noodles": {
+      "Veg Fried Noodles": 75,
+      "Veg Garlic Noodles": 80,
+      "Paneer Noodles": 100,
+      "Egg Noodles": 80,
+      "Chicken Noodles": 90
+    }
+  }
+]

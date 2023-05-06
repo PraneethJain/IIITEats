@@ -1,0 +1,18 @@
+[
+  {
+    "Dosa": {
+      "Plain Dosa": 30,
+      "Onion Dosa": 40,
+      "Masala Dosa": 50,
+      "Uthappam": 40,
+      "Egg Dosa": 50,
+      "Ponganalu": 50
+    },
+    "Fries": {
+      "French Fries": 60,
+      "Aloo Tikkha": 50,
+      "Chicken Nuggets": 75,
+      "Pan Cake": 70
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "Maggi": {
+      "Plain Maggie": 30,
+      "Cheese Maggie": 40,
+      "Veg Masala Maggie": 40,
+      "Egg Maggie": 50,
+      "Hot Garlic Maggie": 35
+    }
+  },
+  {
+    "Tiffins": {
+      "Idly": 35,
+      "Plain Dosa": 30,
+      "Onion Dosa": 45,
+      "Masala Dosa": 45,
+      "Paneer Dosa": 45,
+      "Egg Dosa": 50
+    }
+  }
+]
