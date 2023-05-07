@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block title %} About {% endblock %} {% block
+content %}
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/about.css') }}"
+/>
+
+<div class="about-page" style="overflow-x: hidden; overflow-y: unset">
+  <div class="logo">
+    <img
+      src="{{ url_for('static', filename='images/logo_large.jpeg') }}"
+      alt="IIIT Eats logo"
+    />
+  </div>
+  <div class="sub-titles sub-title1">
+    <h2>Our History:</h2>
+    <p>
+      IIITH Eats was founded in 2023 by a group of students with the goal of
+      making it easier for IIITH students to enjoy great food from their
+      favorite canteens without leaving campus. We know that sometimes you just
+      don't have the time or energy to make the trek to your favorite canteen,
+      and that's where we come in. With IIITH Eats, you can enjoy your favorite
+      meals in the comfort of your own room, all while supporting your fellow
+      students.
+    </p>
+  </div>
+  <div class="sub-titles sub-title2">
+    <h2>Our Partners:</h2>
+    <p>
+      We work with three specific canteens at IIIT Hyderabad(Vindhya Canteen,
+      Tantra Canteen, BasketBall Court Canteen) to offer you a diverse range of
+      cuisines and flavors. We're proud to support these canteens and help them
+      reach more customers through our delivery service. By partnering with
+      IIITH Eats, the canteens can focus on what they do best - making delicious
+      food - while we take care of the delivery logistics.
+    </p>
+  </div>
+  <div class="sub-titles sub-title3">
+    <h2>Fast and Reliable:</h2>
+    <p>
+      We know that when you're hungry, you want your food fast. That's why we
+      strive to provide the fastest and most reliable delivery service possible.
+      Our delivery team is made up of highly organized and efficient student
+      volunteers who are committed to getting your food to you as quickly as
+      possible. We use the latest technology to coordinate deliveries and ensure
+      that everything runs smoothly.
+    </p>
+  </div>
+  <div class="sub-titles sub-title4">
+    <h2>Contactless Delivery:</h2>
+    <p>
+      We're committed to your health and safety. That's why we offer contactless
+      delivery options to minimize contact between our delivery team and
+      customers. Our student volunteers are trained in safe handling practices
+      and take all necessary precautions to ensure your food is delivered
+      safely.
+    </p>
+  </div>
+  <div class="sub-titles sub-title5">
+    <h2>Contact us:</h2>
+    <p>
+      Contact Us: If you have any questions or concerns, please don't hesitate
+      to get in touch! You can reach us by email at info@iiitheats.com or by
+      phone at (555) 555-5555. And if you're a student interested in
+      volunteering with IIITH Eats, we'd love to hear from you too!
+    </p>
+  </div>
+</div>
+
+{% endblock %}

@@ -39,6 +39,11 @@ def index() -> str:
     return render_template("index.html")
 
 
+@app.route("/about")
+def about() -> str:
+    return render_template("about.html")
+
+
 @app.route("/canteen/<name>")
 def canteen(name: str) -> str:
     with app.open_resource(f"static/menu/{name}.json", "r") as f:
