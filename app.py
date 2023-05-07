@@ -75,7 +75,7 @@ def accepted():
             vc_orders.append(order)
 
     return render_template(
-        "pending_orders.html",
+        "accepted_orders.html",
         all_canteens={
             "Tantra": tantra_orders,
             "BBC": bbc_orders,
@@ -147,7 +147,6 @@ def addOrder():
 @app.route("/api/acceptOrder", methods=["POST"])
 def acceptOrder():
     data = request.json
-    # print(data)
     table.update(
         {
             "status": "accepted",
@@ -161,6 +160,21 @@ def acceptOrder():
     print("updated table")
 
     return {"status": 200}
+
+
+@app.route("/api/deliverOrder", methods=["POST"])
+def deliverOrder():
+    data = request.json
+    res = table.search(Order.time == str(data["timestamp"]))[0]
+    code = str(res["code"])
+
+    auth = code == data["code"]
+
+    if not auth:
+        return {"status": 401}
+
+    table.remove(Order.time == str(data["timestamp"]))
+    return {"status": 20}
 
 
 if __name__ == "__main__":

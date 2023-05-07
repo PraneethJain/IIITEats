@@ -22,7 +22,7 @@ block content %}
           <div class="order">{{ order['delta_minutes'] }} min ago</div>
           <div class="user">{{ order['name'] }}</div>
           <div class="deliver">
-            <button data-time="{{order['time']}}">Delivered</button>
+            <button data-time="{{order['time']}}">Deliver</button>
           </div>
         </div>
         <div class="row2">
@@ -43,8 +43,9 @@ block content %}
           </div>
         </div>
         <div class="row3">
-          <div class="travel">Travel: {{order['travel-cost']}}</div>
-          <div class="food">Food: {{order['food-cost']}}</div>
+          <div class="accepted-by">
+            {{ order['accepted-by'] }} - {{ order['contact'] }}
+          </div>
           <div class="total">Total: {{order['total-cost']}}</div>
         </div>
       </div>

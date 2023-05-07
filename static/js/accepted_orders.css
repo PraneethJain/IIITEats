@@ -1,0 +1,117 @@
+.background {
+  width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 7rem;
+  text-align: center;
+  background-color: #293f7f;
+  background-image: linear-gradient(45deg, #293f7f 0%, #2d46a0 100%);
+  color: #dfebfa;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: Poppins-SemiBold;
+}
+
+.background > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bbc {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.orders {
+  width: 100%;
+  padding: 1rem;
+}
+
+.card {
+  max-height: 7rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  text-align: center;
+  transition: 0.5s;
+  margin: 1rem;
+  border-radius: 5px;
+  background-color: #70a5ea;
+}
+
+.card:hover {
+  max-height: 25rem;
+  transition: 0.5s;
+}
+
+.card .row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.row2 {
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s ease-in;
+}
+
+.card:hover .row2 {
+  opacity: 1;
+  transition: 0.5s ease-out;
+}
+
+.row2 ol {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.row2 ol > li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.row3 {
+  padding: 0.5rem;
+  border-top: 1px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  width: 7rem;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background-color: #dfebfa;
+  transition: all 0.2s ease-in-out 0ms;
+  user-select: none;
+}
+
+button:hover {
+  background-color: #f2f2f2;
+}
+
+button:active {
+  transform: scale(0.95);
+}
