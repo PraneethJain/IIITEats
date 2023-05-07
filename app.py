@@ -1,4 +1,11 @@
-from flask import Flask, render_template, send_from_directory
+from flask import (
+    Flask,
+    render_template,
+    send_from_directory,
+    redirect,
+    url_for,
+    request,
+)
 import json
 import os
 
@@ -34,6 +41,17 @@ def canteen(name: str) -> str:
     return render_template(
         "canteen.html", name=name_to_full_name[name], menu_list=menu_list
     )
+
+
+@app.route("/orders/pending")
+def pending():
+    return render_template("pending_orders.html")
+
+
+@app.route("/api/addOrder", methods=["POST"])
+def addOrder():
+    print(request.form)
+    return redirect("/orders/pending")
 
 
 if __name__ == "__main__":

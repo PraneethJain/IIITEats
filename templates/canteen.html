@@ -8,6 +8,8 @@ content %}
 <script defer src="{{ url_for('static', filename='js/canteen.js') }}"></script>
 
 <div class="background">
+
+  <form action="/api/addOrder" method="POST">
   <div class="menu">
     <div class="heading">{{name}}</div>
     {% for category in menu_list %} {% for category_name, category_items in
@@ -18,7 +20,7 @@ content %}
       <div class="left">{{item_name}}</div>
       <div class="right" data-price="{{item_price}}">
         {{item_price}}
-        <select name="quantity" id="quantity">
+        <select name="quantity" id="{{item_name}}">
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -31,7 +33,7 @@ content %}
     {% endfor %} {%endfor %} {% endfor %}
   </div>
 
-  <form>
+  <div class="form">
     <div class="name">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" /><br /><br />
@@ -70,6 +72,8 @@ content %}
     </table>
 
     <input type="submit" value="Submit" />
+  </div>
+
   </form>
 </div>
 
