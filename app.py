@@ -50,9 +50,10 @@ def canteen(name: str) -> str:
     )
 
 
-@app.route("/orders/pending")
-def pending():
-    orders = table.all()
+@app.route("/orders/accepted")
+def accepted():
+    print("accepted")
+    orders = table.search(Order.status == "accepted")
     tantra_orders = []
     bbc_orders = []
     vc_orders = []
@@ -64,7 +65,41 @@ def pending():
         delta_minutes = floor(delta.total_seconds() / 60)
 
         order["delta_minutes"] = delta_minutes
-        order["hostel"] = name_to_full_name[order["hostel"]]
+        if order["hostel"] in name_to_full_name:
+            order["hostel"] = name_to_full_name[order["hostel"]]
+        if order["canteen"] == "Tantra":
+            tantra_orders.append(order)
+        elif order["canteen"] == "BBC":
+            bbc_orders.append(order)
+        elif order["canteen"] == "Vindhya Canteen":
+            vc_orders.append(order)
+
+    return render_template(
+        "pending_orders.html",
+        all_canteens={
+            "Tantra": tantra_orders,
+            "BBC": bbc_orders,
+            "Vindhya Canteen": vc_orders,
+        },
+    )
+
+
+@app.route("/orders/pending")
+def pending():
+    orders = table.search(Order.status == "pending")
+    tantra_orders = []
+    bbc_orders = []
+    vc_orders = []
+
+    for order in orders:
+        if order["hostel"] in name_to_full_name:
+            order["hostel"] = name_to_full_name[order["hostel"]]
+        order_time = datetime.strptime(order["time"], "%Y-%m-%d %H:%M:%S.%f")
+        current_time = datetime.now()
+        delta = current_time - order_time
+        delta_minutes = floor(delta.total_seconds() / 60)
+
+        order["delta_minutes"] = delta_minutes
         if order["canteen"] == "Tantra":
             tantra_orders.append(order)
         elif order["canteen"] == "BBC":
@@ -84,7 +119,6 @@ def pending():
 
 @app.route("/api/addOrder", methods=["POST"])
 def addOrder():
-    # print(request.form)
     data = {
         "name": request.form.get("name"),
         "hostel": request.form.get("hostel"),
@@ -106,12 +140,31 @@ def addOrder():
         else:
             data["orders"].append((k, v))
 
-    # print(data)
     table.insert(data)
     return redirect("/orders/pending")
+
+
+@app.route("/api/acceptOrder", methods=["POST"])
+def acceptOrder():
+    data = request.json
+    # print(data)
+    table.update(
+        {
+            "status": "accepted",
+            "accepted-by": data["name"],
+            "contact": data["number"],
+            "code": data["code"],
+        },
+        Order.time == str(data["timestamp"]),
+    )
+
+    print("updated table")
+
+    return {"status": 200}
 
 
 if __name__ == "__main__":
     db = TinyDB("db.json")
     table = db.table("orders")
+    Order = Query()
     app.run(debug=True)

@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block title %} Accepted Orders {% endblock %} {%
+block content %}
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/accepted_orders.css') }}"
+/>
+
+<script
+  defer
+  src="{{ url_for('static', filename='js/accepted_orders.js') }}"
+></script>
+
+<div class="background">
+  {% for canteen_name, canteen_orders in all_canteens.items() %}
+  <div>
+    <h1>{{ canteen_name }}</h1>
+    <div class="orders">
+      {% for order in canteen_orders %}
+      <div class="card">
+        <div class="row1">
+          <div class="order">{{ order['delta_minutes'] }} min ago</div>
+          <div class="user">{{ order['name'] }}</div>
+          <div class="deliver">
+            <button data-time="{{order['time']}}">Delivered</button>
+          </div>
+        </div>
+        <div class="row2">
+          <ol>
+            {% for item_name, item_price in order['orders'] %}
+            <li>
+              <div class="left">{{ item_name }}</div>
+              <div class="right">x{{ item_price }}</div>
+            </li>
+            {% endfor %}
+          </ol>
+
+          <div class="info">
+            <div class="location">
+              {{order['hostel']}} - {{order['room-number']}}
+            </div>
+            <div class="phone-number">{{order['phone-number']}}</div>
+          </div>
+        </div>
+        <div class="row3">
+          <div class="travel">Travel: {{order['travel-cost']}}</div>
+          <div class="food">Food: {{order['food-cost']}}</div>
+          <div class="total">Total: {{order['total-cost']}}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

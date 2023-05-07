@@ -17,7 +17,7 @@ block content %}
       <div class="order">{{ order['delta_minutes'] }} min ago</div>
       <div class="user">{{ order['name'] }}</div>
       <div class="accept">
-        <button>Accept</button>
+        <button data-time="{{order['time']}}">Accept</button>
       </div>
     </div>
     <div class="row2">

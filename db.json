@@ -1,1 +1,110 @@
-{"orders": {"1": {"name": "Rohan", "hostel": "bakul", "room-number": "118", "phone-number": "8309771767", "travel-cost": "40", "food-cost": "1040", "total-cost": "1080", "canteen": "Tantra", "time": "2023-05-07 11:37:45.670760", "status": "pending", "orders": [["Veg Manchuria", "2"], ["Gobi Manchuria", "3"], ["Veg Garlic Noodles", "3"], ["Paneer Noodles", "1"], ["Egg Noodles", "1"], ["Chicken Noodles", "3"]]}, "2": {"name": "Praneeth", "hostel": "bakul", "room-number": "215", "phone-number": "6264381767", "travel-cost": "40", "food-cost": "95", "total-cost": "135", "canteen": "BBC", "time": "2023-05-07 11:44:34.182072", "status": "pending", "orders": [["Egg Maggie", "1"], ["Masala Dosa", "1"]]}, "3": {"name": "Sudhan", "hostel": "bakul", "room-number": "123", "phone-number": "765129453971", "travel-cost": "40", "food-cost": "210", "total-cost": "250", "canteen": "Vindhya Canteen", "time": "2023-05-07 11:49:42.331503", "status": "pending", "orders": [["Egg Dosa", "3"], ["French Fries", "1"]]}}}
+{
+  "orders": {
+    "1": {
+      "name": "Rohan",
+      "hostel": "bakul",
+      "room-number": "118",
+      "phone-number": "8309771767",
+      "travel-cost": "40",
+      "food-cost": "1040",
+      "total-cost": "1080",
+      "canteen": "Tantra",
+      "time": "2023-05-07 11:37:45.670760",
+      "status": "accepted",
+      "orders": [
+        ["Veg Manchuria", "2"],
+        ["Gobi Manchuria", "3"],
+        ["Veg Garlic Noodles", "3"],
+        ["Paneer Noodles", "1"],
+        ["Egg Noodles", "1"],
+        ["Chicken Noodles", "3"]
+      ],
+      "accepted-by": "Praneeth",
+      "contact": "6264381767",
+      "code": 97156
+    },
+    "2": {
+      "name": "Praneeth",
+      "hostel": "bakul",
+      "room-number": "215",
+      "phone-number": "6264381767",
+      "travel-cost": "40",
+      "food-cost": "95",
+      "total-cost": "135",
+      "canteen": "BBC",
+      "time": "2023-05-07 11:44:34.182072",
+      "status": "accepted",
+      "orders": [
+        ["Egg Maggie", "1"],
+        ["Masala Dosa", "1"]
+      ],
+      "accepted-by": "Rnadomdowam",
+      "contact": "gianhbuoaebha",
+      "code": 13354
+    },
+    "3": {
+      "name": "Sudhan",
+      "hostel": "bakul",
+      "room-number": "123",
+      "phone-number": "765129453971",
+      "travel-cost": "40",
+      "food-cost": "210",
+      "total-cost": "250",
+      "canteen": "Vindhya Canteen",
+      "time": "2023-05-07 11:49:42.331503",
+      "status": "accepted",
+      "orders": [
+        ["Egg Dosa", "3"],
+        ["French Fries", "1"]
+      ],
+      "accepted-by": "a",
+      "contact": "b",
+      "code": 67393
+    },
+    "4": {
+      "name": "ok",
+      "hostel": "bakul",
+      "room-number": "1",
+      "phone-number": "2",
+      "travel-cost": "40",
+      "food-cost": "70",
+      "total-cost": "110",
+      "canteen": "BBC",
+      "time": "2023-05-07 13:29:43.147528",
+      "status": "accepted",
+      "orders": [["Hot Garlic Maggie", "2"]],
+      "accepted-by": "g",
+      "contact": "l",
+      "code": 71606
+    },
+    "5": {
+      "name": "Praneeth",
+      "hostel": "bakul",
+      "room-number": "215",
+      "phone-number": "6264381767'",
+      "travel-cost": "40",
+      "food-cost": "80",
+      "total-cost": "120",
+      "canteen": "Tantra",
+      "time": "2023-05-07 13:40:35.951527",
+      "status": "accepted",
+      "orders": [["Egg Noodles", "1"]],
+      "accepted-by": "ok",
+      "contact": "b",
+      "code": 68226
+    },
+    "6": {
+      "name": "a",
+      "hostel": "bakul",
+      "room-number": "1",
+      "phone-number": "2",
+      "travel-cost": "40",
+      "food-cost": "320",
+      "total-cost": "360",
+      "canteen": "Tantra",
+      "time": "2023-05-07 13:41:19.319040",
+      "status": "pending",
+      "orders": [["Egg Noodles", "4"]]
+    }
+  }
+}
