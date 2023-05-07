@@ -13,6 +13,13 @@
   src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
 }
 
+@font-face {
+  font-family: Pacifico;
+  src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +40,10 @@ header {
   z-index: 10;
   padding: 0 1.5rem;
   color: #eff9ff;
+}
+
+header h1 {
+  font-family: Pacifico;
 }
 
 a {

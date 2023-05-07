@@ -22,7 +22,9 @@
 .heading {
   border-radius: 50px;
   grid-area: img;
-  font-family: Poppins-Bold;
+  font-family: sans-serif;
+  font-weight: 200;
+  letter-spacing: -5px;
   font-size: 8rem;
   color: white;
   text-align: center;
