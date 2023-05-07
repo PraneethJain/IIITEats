@@ -5,25 +5,20 @@
   grid-template-columns: repeat(3, 1fr);
   padding: 7rem;
   text-align: center;
-  background-color: #293f7f;
-  background-image: linear-gradient(45deg, #293f7f 0%, #2d46a0 100%);
+  background-image: url(../images/bg_orange.svg);
   color: #dfebfa;
 }
 
-h1 {
+.background h1 {
   font-size: 3rem;
   font-family: Poppins-SemiBold;
+  color: #ffefd4;
 }
 
 .background > div {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.bbc {
-  border-left: 1px solid white;
-  border-right: 1px solid white;
 }
 
 .orders {
@@ -43,7 +38,9 @@ h1 {
   transition: 0.5s;
   margin: 1rem;
   border-radius: 5px;
-  background-color: #70a5ea;
+  color: black;
+  background-color: #ffa348;
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
@@ -90,7 +87,7 @@ h1 {
 
 .row3 {
   padding: 0.5rem;
-  border-top: 1px solid white;
+  border-top: 1px solid #9d3a0f;
   width: 100%;
   display: flex;
   justify-content: space-between;
