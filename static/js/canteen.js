@@ -40,6 +40,5 @@ items.forEach((item) => {
   });
 });
 
-console.log("test");
 document.querySelector(".background").style.backgroundImage =
   "url(../static/images/bg_red.svg)";
