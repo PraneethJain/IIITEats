@@ -6,8 +6,11 @@ from flask import (
     url_for,
     request,
 )
+from datetime import datetime
 import json
 import os
+
+from tinydb import TinyDB, Query
 
 app = Flask(__name__)
 
@@ -51,8 +54,28 @@ def pending():
 @app.route("/api/addOrder", methods=["POST"])
 def addOrder():
     print(request.form)
+    data = {
+        "name": request.form.get("name"),
+        "hostel": request.form.get("hostel"),
+        "room-number": request.form.get("room-number"),
+        "phone-number": request.form.get("phone-number"),
+        "cost": request.form.get("cost"),
+        "time": str(datetime.now()),
+        "orders": [],
+    }
+    for k, v in request.form.items():
+        if k == "name":
+            break
+        if v == "0":
+            continue
+        else:
+            data["orders"].append((k, v))
+
+    table.insert(data)
     return redirect("/orders/pending")
 
 
 if __name__ == "__main__":
+    db = TinyDB("db.json")
+    table = db.table("orders")
     app.run(debug=True)
