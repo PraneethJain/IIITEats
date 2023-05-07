@@ -74,15 +74,17 @@ def pending():
 
     return render_template(
         "pending_orders.html",
-        tantra_orders=tantra_orders,
-        bbc_orders=bbc_orders,
-        vc_orders=vc_orders,
+        all_canteens={
+            "Tantra": tantra_orders,
+            "BBC": bbc_orders,
+            "Vindhya Canteen": vc_orders,
+        },
     )
 
 
 @app.route("/api/addOrder", methods=["POST"])
 def addOrder():
-    print(request.form)
+    # print(request.form)
     data = {
         "name": request.form.get("name"),
         "hostel": request.form.get("hostel"),

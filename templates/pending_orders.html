@@ -7,10 +7,11 @@ block content %}
 
 <div class="background">
 
-<div class="tantra">
-  <h1>Tantra</h1>
+{% for canteen_name, canteen_orders in all_canteens.items() %}
+<div>
+  <h1>{{ canteen_name }}</h1>
   <div class="orders">
-      {% for order in tantra_orders %}
+      {% for order in canteen_orders %}
   <div class="card">
     <div class="row1">
       <div class="order">{{ order['delta_minutes'] }} min ago</div>
@@ -35,7 +36,9 @@ block content %}
         </div>  
     </div>
    <div class="row3">
-      Test test est
+     <div class="travel">Travel: {{order['travel-cost']}}</div>
+     <div class="food">Food: {{order['food-cost']}}</div>
+     <div class="total">Total: {{order['total-cost']}}</div>
     </div>  
 
   </div>
@@ -43,16 +46,7 @@ block content %}
   </div>
  
 </div>
-
-<div class="bbc">
-  <h1>BBC</h1>
-</div>
-
-<div class="vc">
-  <h1>Vindhya Canteen</h1>
-  <div class="orders">
-  </div>
-</div>
+{% endfor %}
 
 </div>
 
