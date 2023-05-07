@@ -27,6 +27,7 @@
   letter-spacing: -5px;
   font-size: 8rem;
   color: white;
+  user-select: none;
   text-align: center;
 }
 
