@@ -21,7 +21,7 @@ const getFoodCost = () => {
 };
 
 const updateTotalCost = () => {
-  const travelCostInt = 40;
+  const travelCostInt = 10;
   const foodCostInt = getFoodCost();
   const totalCostInt = travelCostInt + foodCostInt;
 
