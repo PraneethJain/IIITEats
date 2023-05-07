@@ -1,28 +1,49 @@
 .about-page {
-  background-color: rgba(9, 100, 237, 0.596);
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 100%);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 2rem;
-  row-gap: 10px;
+  grid-template-rows: repeat(6, 1fr);
   justify-items: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
+  padding: 3rem;
+  padding-top: 13rem;
+  grid-template-areas:
+    "history    .   ."
+    ".    .   partners"
+    ".   img   ."
+    "fast    .   ."
+    ".    .   deliv"
+    "contact contact contact";
 }
 
-.logo {
+.heading {
   border-radius: 50px;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+  grid-area: img;
+  font-family: Poppins-Bold;
+  font-size: 8rem;
+  color: white;
+  text-align: center;
 }
 
 .sub-titles {
   display: flex;
+  padding: 1.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: -10rem 0;
   font-size: 1.2rem;
+  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.sub-titles:hover {
+  box-shadow: 0 0 30px 25px rgba(0, 0, 0, 0.3);
 }
 
 .title {
@@ -32,46 +53,28 @@
 
 .sub-titles h2 {
   font-size: 2rem;
-  margin-top: 3rem;
 }
 
-.sub-title1 {
+.sub-titles:nth-child(2) {
+  grid-area: history;
   background-color: turquoise;
   border-radius: 25px;
-  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
-  /* opacity: 0.9; */
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
 }
 
-.sub-title2 {
+.sub-titles:nth-child(3) {
+  grid-area: partners;
   background-color: lightcoral;
-  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
-  /* filter: brightness(150%); */
   border-radius: 25px;
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-  margin-top: -200px;
 }
 
-.sub-title3 {
+.sub-titles:nth-child(4) {
+  grid-area: fast;
   background-color: rgb(35, 225, 70);
-  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  grid-column: 1 / 2;
-  grid-row: 3 / 4;
-  margin-top: -270px;
 }
 
-.sub-title4 {
+.sub-titles:nth-child(5) {
+  grid-area: deliv;
   background-color: lightsalmon;
-  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  grid-column: 3 / 4;
-  grid-row: 4 / 5;
-  margin-top: -40px;
-}
-.sub-title5 {
-  grid-column: 1 / 4;
-  grid-row: 5 / 6;
 }
