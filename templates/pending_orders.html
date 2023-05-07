@@ -1,6 +1,30 @@
 {% extends 'base.html' %} {% block title %} Pending Orders {% endblock %} {%
 block content %}
 
-<h1>ok</h1>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pending_orders.css') }}">
+
+<div class="background">
+
+<div class="tantra">
+  <h1>Tantra</h1>
+  <div class="orders">
+
+  </div>
+</div>
+
+<div class="bbc">
+  <h1>BBC</h1>
+  <div class="orders">
+
+  </div>
+</div>
+
+<div class="vc">
+  <h1>Vindhya Canteen</h1>
+  <div class="orders">
+  </div>
+</div>
+
+</div>
 
 {% endblock %}

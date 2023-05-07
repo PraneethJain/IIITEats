@@ -48,19 +48,39 @@ def canteen(name: str) -> str:
 
 @app.route("/orders/pending")
 def pending():
-    return render_template("pending_orders.html")
+    orders = table.all()
+    tantra_orders = []
+    bbc_orders = []
+    vc_orders = []
+
+    for order in orders:
+        if order["canteen"] == "Tantra":
+            tantra_orders.append(order)
+        elif order["canteen"] == "BBC":
+            bbc_orders.append(order)
+        elif order["canteen"] == "Vindhya Canteen":
+            vc_orders.append(order)
+
+    return render_template(
+        "pending_orders.html",
+        tantra_orders=tantra_orders,
+        bbc_orders=bbc_orders,
+        vc_orders=vc_orders,
+    )
 
 
 @app.route("/api/addOrder", methods=["POST"])
 def addOrder():
-    print(request.form)
+    # print(request.form)
     data = {
         "name": request.form.get("name"),
         "hostel": request.form.get("hostel"),
         "room-number": request.form.get("room-number"),
         "phone-number": request.form.get("phone-number"),
         "cost": request.form.get("cost"),
+        "canteen": request.form.get("canteen"),
         "time": str(datetime.now()),
+        "status": "pending",
         "orders": [],
     }
     for k, v in request.form.items():
@@ -71,6 +91,7 @@ def addOrder():
         else:
             data["orders"].append((k, v))
 
+    # print(data)
     table.insert(data)
     return redirect("/orders/pending")
 

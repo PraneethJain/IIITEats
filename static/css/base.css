@@ -8,6 +8,11 @@
   src: url(../fonts/Poppins/Poppins-Bold.ttf);
 }
 
+@font-face {
+  font-family: Poppins-SemiBold;
+  src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

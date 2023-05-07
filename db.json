@@ -1,0 +1,61 @@
+{
+  "orders": {
+    "1": {
+      "name": "Praneeth",
+      "hostel": "bakul",
+      "room-number": "215",
+      "phone-number": "6264381767",
+      "cost": "350",
+      "canteen": "Tantra",
+      "time": "2023-05-07 09:20:39.732578",
+      "status": "pending",
+      "orders": [
+        ["Veg Fried Noodles", "2"],
+        ["Egg Noodles", "2"]
+      ]
+    },
+    "2": {
+      "name": "Rohan",
+      "hostel": "bakul",
+      "room-number": "118",
+      "phone-number": "999999999",
+      "cost": "750",
+      "canteen": "Tantra",
+      "time": "2023-05-07 09:21:38.167401",
+      "status": "pending",
+      "orders": [
+        ["Chicken Manchuria", "2"],
+        ["Chicken Noodles", "5"]
+      ]
+    },
+    "3": {
+      "name": "Rohan",
+      "hostel": "bakul",
+      "room-number": "118",
+      "phone-number": "1234456789",
+      "cost": "230",
+      "canteen": "BBC",
+      "time": "2023-05-07 09:25:35.197258",
+      "status": "pending",
+      "orders": [
+        ["Egg Maggie", "2"],
+        ["Masala Dosa", "2"]
+      ]
+    },
+    "4": {
+      "name": "Sudhan",
+      "hostel": "bakul",
+      "room-number": "1",
+      "phone-number": "1234567899",
+      "cost": "250",
+      "canteen": "Vindhya Canteen",
+      "time": "2023-05-07 09:27:41.872904",
+      "status": "pending",
+      "orders": [
+        ["Plain Dosa", "2"],
+        ["Egg Dosa", "2"],
+        ["Aloo Tikkha", "1"]
+      ]
+    }
+  }
+}
