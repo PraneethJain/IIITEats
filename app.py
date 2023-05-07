@@ -4,6 +4,12 @@ import os
 
 app = Flask(__name__)
 
+name_to_full_name = {
+    "tantra": "Tantra",
+    "bbc": "BBC",
+    "vc": "Vindhya Canteen",
+}
+
 
 @app.route("/favicon.ico")
 def favicon():
@@ -25,11 +31,9 @@ def canteen(name: str) -> str:
         menu_list = json.load(f)
 
     print(menu_list)
-    # menu_list = [
-    #     {"Sandwich": {"Veg Sandwich": 40, "Cheese Potato Sandwich": 50}},
-    #     {"Burger": {"Veg Burger": 60, "Cheese Burger": 80}},
-    # ]
-    return render_template("canteen.html", name=name, menu_list=menu_list)
+    return render_template(
+        "canteen.html", name=name_to_full_name[name], menu_list=menu_list
+    )
 
 
 if __name__ == "__main__":
