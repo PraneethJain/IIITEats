@@ -56,6 +56,12 @@
   width: 15vw;
   aspect-ratio: 1/1;
   border-radius: 50%;
+  box-shadow: 0rem 0rem 1rem 1rem rgba(0, 0, 0, 0.4);
+  transition: 0.2s;
+}
+
+.canteens .canteen img:hover {
+  box-shadow: 0rem 0rem 1.3rem 1.3rem rgba(0, 0, 0, 0.6);
 }
 
 .canteens .canteen .name {
