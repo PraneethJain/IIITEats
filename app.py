@@ -174,7 +174,7 @@ def deliverOrder():
         return {"status": 401}
 
     table.remove(Order.time == str(data["timestamp"]))
-    return {"status": 20}
+    return {"status": 200}
 
 
 if __name__ == "__main__":

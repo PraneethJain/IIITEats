@@ -19,7 +19,7 @@ deliverButtons.forEach((btn) => {
         if (x.status == 401) {
           alert("Wrong code!");
         } else if (x.status == 200) {
-          location.reload();
+          window.location.reload();
         }
       });
   });
