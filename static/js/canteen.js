@@ -39,3 +39,7 @@ items.forEach((item) => {
     updateTotalCost();
   });
 });
+
+console.log("test");
+document.querySelector(".background").style.backgroundImage =
+  "url(../static/images/bg_red.svg)";

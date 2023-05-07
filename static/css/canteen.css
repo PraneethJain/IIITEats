@@ -1,7 +1,7 @@
 .background {
   width: 100vw;
   height: 100vh;
-  background: url(../images/bg_red.svg);
+  background: #001220;
   background-size: cover;
   color: white;
   padding: 3.5rem 10rem;

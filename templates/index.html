@@ -7,19 +7,19 @@
 
 <div class="background">
   <div class="canteens">
-    <div class="canteen">
-      <img src="https://picsum.photos/600"> 
-      <div class="name">Tantra</div>
+    <div class="canteen" onclick="window.location.href='/canteen/tantra'">
+      <img src="{{ url_for('static', filename='images/tantra.jpeg') }}"> 
+      <div class="name strokeme">Tantra</div>
     </div>
 
-    <div class="canteen">
-      <img src="https://picsum.photos/600"> 
-      <div class="name">BBC</div>
+    <div class="canteen" onclick="window.location.href='/canteen/bbc'">
+      <img src="{{ url_for('static', filename='images/bbc.jpeg') }}"> 
+      <div class="name strokeme">BBC</div>
     </div>
 
-    <div class="canteen">
-      <img src="https://picsum.photos/600"> 
-      <div class="name">VC</div>
+    <div class="canteen" onclick="window.location.href='/canteen/vc'">
+      <img src="{{ url_for('static', filename='images/vc.jpeg') }}"> 
+      <div class="name strokeme">VC</div>
     </div>
   </div> 
   <h1>IIITEats</h1> 
