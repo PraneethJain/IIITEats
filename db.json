@@ -1,60 +1,74 @@
 {
   "orders": {
     "1": {
-      "name": "Praneeth",
+      "name": "Rohan",
       "hostel": "bakul",
-      "room-number": "215",
-      "phone-number": "6264381767",
-      "cost": "350",
+      "room-number": "118",
+      "phone-number": "8309771767",
+      "travel-cost": null,
+      "food-cost": null,
+      "total-cost": null,
       "canteen": "Tantra",
-      "time": "2023-05-07 09:20:39.732578",
+      "time": "2023-05-07 11:23:18.618318",
       "status": "pending",
       "orders": [
-        ["Veg Fried Noodles", "2"],
-        ["Egg Noodles", "2"]
+        ["Gobi Manchuria", "3"],
+        ["Veg Garlic Noodles", "3"],
+        ["Chicken Noodles", "1"]
       ]
     },
     "2": {
       "name": "Rohan",
       "hostel": "bakul",
       "room-number": "118",
-      "phone-number": "999999999",
-      "cost": "750",
+      "phone-number": "8309771767",
+      "travel-cost": null,
+      "food-cost": null,
+      "total-cost": null,
       "canteen": "Tantra",
-      "time": "2023-05-07 09:21:38.167401",
+      "time": "2023-05-07 11:23:30.540412",
       "status": "pending",
       "orders": [
-        ["Chicken Manchuria", "2"],
-        ["Chicken Noodles", "5"]
+        ["Gobi Manchuria", "3"],
+        ["Veg Garlic Noodles", "3"],
+        ["Chicken Noodles", "3"]
       ]
     },
     "3": {
       "name": "Rohan",
       "hostel": "bakul",
       "room-number": "118",
-      "phone-number": "1234456789",
-      "cost": "230",
-      "canteen": "BBC",
-      "time": "2023-05-07 09:25:35.197258",
+      "phone-number": "8309771767",
+      "travel-cost": "40",
+      "food-cost": "[object HTMLInputElement]",
+      "total-cost": "840",
+      "canteen": "Tantra",
+      "time": "2023-05-07 11:25:22.921682",
       "status": "pending",
       "orders": [
-        ["Egg Maggie", "2"],
-        ["Masala Dosa", "2"]
+        ["Gobi Manchuria", "3"],
+        ["Veg Garlic Noodles", "3"],
+        ["Egg Noodles", "1"],
+        ["Chicken Noodles", "3"]
       ]
     },
     "4": {
-      "name": "Sudhan",
+      "name": "Rohan",
       "hostel": "bakul",
-      "room-number": "1",
-      "phone-number": "1234567899",
-      "cost": "250",
-      "canteen": "Vindhya Canteen",
-      "time": "2023-05-07 09:27:41.872904",
+      "room-number": "118",
+      "phone-number": "8309771767",
+      "travel-cost": "40",
+      "food-cost": "900",
+      "total-cost": "940",
+      "canteen": "Tantra",
+      "time": "2023-05-07 11:25:41.625802",
       "status": "pending",
       "orders": [
-        ["Plain Dosa", "2"],
-        ["Egg Dosa", "2"],
-        ["Aloo Tikkha", "1"]
+        ["Gobi Manchuria", "3"],
+        ["Veg Garlic Noodles", "3"],
+        ["Paneer Noodles", "1"],
+        ["Egg Noodles", "1"],
+        ["Chicken Noodles", "3"]
       ]
     }
   }

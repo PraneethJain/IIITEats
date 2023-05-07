@@ -7,6 +7,7 @@ from flask import (
     request,
 )
 from datetime import datetime
+from math import floor
 import json
 import os
 
@@ -18,6 +19,9 @@ name_to_full_name = {
     "tantra": "Tantra",
     "bbc": "BBC",
     "vc": "Vindhya Canteen",
+    "bakul": "Bakul Nivas",
+    "parijaat": "Parijaat Nivas",
+    "obh": "Old Boys Hostel",
 }
 
 
@@ -54,6 +58,13 @@ def pending():
     vc_orders = []
 
     for order in orders:
+        order_time = datetime.strptime(order["time"], "%Y-%m-%d %H:%M:%S.%f")
+        current_time = datetime.now()
+        delta = current_time - order_time
+        delta_minutes = floor(delta.total_seconds() / 60)
+
+        order["delta_minutes"] = delta_minutes
+        order["hostel"] = name_to_full_name[order["hostel"]]
         if order["canteen"] == "Tantra":
             tantra_orders.append(order)
         elif order["canteen"] == "BBC":
@@ -71,13 +82,15 @@ def pending():
 
 @app.route("/api/addOrder", methods=["POST"])
 def addOrder():
-    # print(request.form)
+    print(request.form)
     data = {
         "name": request.form.get("name"),
         "hostel": request.form.get("hostel"),
         "room-number": request.form.get("room-number"),
         "phone-number": request.form.get("phone-number"),
-        "cost": request.form.get("cost"),
+        "travel-cost": request.form.get("travel-cost"),
+        "food-cost": request.form.get("food-cost"),
+        "total-cost": request.form.get("total-cost"),
         "canteen": request.form.get("canteen"),
         "time": str(datetime.now()),
         "status": "pending",

@@ -1,8 +1,12 @@
 const items = document.querySelectorAll(".item");
 const form = document.querySelector("form");
+
 const travelCost = form.querySelector(".travel-cost");
 const foodCost = form.querySelector(".food-cost");
 const totalCost = form.querySelector(".total-cost");
+
+const travelCostHidden = form.querySelector(".travel-cost-hidden");
+const foodCostHidden = form.querySelector(".food-cost-hidden");
 const totalCostHidden = form.querySelector(".total-cost-hidden");
 
 const getFoodCost = () => {
@@ -24,6 +28,9 @@ const updateTotalCost = () => {
   travelCost.textContent = `${travelCostInt}`;
   foodCost.textContent = `${foodCostInt}`;
   totalCost.textContent = `${totalCostInt}`;
+
+  travelCostHidden.value = `${travelCostInt}`;
+  foodCostHidden.value = `${foodCostInt}`;
   totalCostHidden.value = `${totalCostInt}`;
 };
 

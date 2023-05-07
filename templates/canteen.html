@@ -43,7 +43,7 @@ content %}
       <label for="hostel">Hostel:</label>
       <select id="hostel" name="hostel">
         <option value="bakul">Bakul Nivas</option>
-        <option value="parijaat">Parijaat</option>
+        <option value="parijaat">Parijaat Nivas</option>
         <option value="obh">Old Boys Hostel</option></select
       ><br /><br />
     </div>
@@ -70,8 +70,12 @@ content %}
         <td class="total-cost">0</td>
       </tr>
     </table>
-    <input type="hidden" name="cost" class="total-cost-hidden" value="0" />
+
+    <input type="hidden" name="travel-cost" class="travel-cost-hidden" value="0" />
+    <input type="hidden" name="food-cost" class="food-cost-hidden" value="0" />
+    <input type="hidden" name="total-cost" class="total-cost-hidden" value="0" />
     <input type="hidden" name="canteen" value="{{ name }}" />
+
     <input type="submit" value="Submit" />
   </div>
 

@@ -3,20 +3,49 @@ block content %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/pending_orders.css') }}">
 
+<script defer src="{{ url_for('static', filename='js/pending_orders.js') }}"></script>
+
 <div class="background">
 
 <div class="tantra">
   <h1>Tantra</h1>
   <div class="orders">
+      {% for order in tantra_orders %}
+  <div class="card">
+    <div class="row1">
+      <div class="order">{{ order['delta_minutes'] }} min ago</div>
+      <div class="user">{{ order['name'] }}</div>
+      <div class="accept">
+        <button>Accept</button>
+      </div>
+    </div>
+    <div class="row2">
+      <ol>
+          {% for item_name, item_price in order['orders'] %}
+          <li>
+            <div class="left">{{ item_name }}</div>
+            <div class="right">x{{ item_price }}</div>
+          </li>
+          {% endfor %}
+        </ol>
+
+        <div class="info">
+          <div class="location">{{order['hostel']}} - {{order['room-number']}}</div>
+          <div class="phone-number">{{order['phone-number']}}</div>
+        </div>  
+    </div>
+   <div class="row3">
+      Test test est
+    </div>  
 
   </div>
+      {% endfor %}
+  </div>
+ 
 </div>
 
 <div class="bbc">
   <h1>BBC</h1>
-  <div class="orders">
-
-  </div>
 </div>
 
 <div class="vc">
