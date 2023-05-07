@@ -20,7 +20,7 @@ content %}
       <div class="left">{{item_name}}</div>
       <div class="right" data-price="{{item_price}}">
         {{item_price}}
-        <select name="quantity" id="{{item_name}}">
+        <select name="{{item_name}}" id="quantity">
           <option value="0">0</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -70,7 +70,7 @@ content %}
         <td class="total-cost">0</td>
       </tr>
     </table>
-
+    <input type="hidden" name="cost" class="total-cost-hidden" value="0" />
     <input type="submit" value="Submit" />
   </div>
 

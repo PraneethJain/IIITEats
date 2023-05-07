@@ -3,8 +3,6 @@
   height: 100vh;
   background: url(../images/bg_red.svg);
   background-size: cover;
-  background-attachment: local;
-  /* background-attachment: fixed; */
   color: white;
   padding: 3.5rem 10rem;
   display: flex;
